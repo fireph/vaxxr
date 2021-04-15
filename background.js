@@ -33,11 +33,11 @@ function fillMyTurn(tabId, form) {
                 sendClick(tabId, "//input[@id='q-screening-health-data']");
                 sendClick(tabId, "//input[@id='q-screening-accuracy-attestation']");
                 sendClick(tabId, "//input[@id='q-screening-privacy-statement']");
-                sendClick(tabId, "//input[@id='q-screening-eligibility-age-range-50-64']");
+                sendClick(tabId, "//input[@id='q-screening-eligibility-age-range-16 - 49']");
                 sendClick(tabId, "//input[@id='q-screening-underlying-health-condition-No']");
                 sendClick(tabId, "//input[@id='q-screening-disability-No']");
     
-                sendSelect(tabId, "//select[@id='q-screening-eligibility-industry']", "Communications and IT");
+                sendSelect(tabId, "//select[@id='q-screening-eligibility-industry']", "Other");
                 sendClick(tabId, "//input[@id='q-screening-homeless-No']");
                 sendSelect(tabId, "//select[@id='q-screening-eligibility-county']", "San Francisco");
                 sendClick(tabId, "//input[@id='q-screening-different-county-No']");
@@ -58,9 +58,7 @@ function fillCcsf(tabId, form) {
     wait(tabId, "//button[@data-test='submit']", function() {
         sendClick(tabId, "//button[@data-test='submit']");
         sendClick(tabId, "//input[starts-with(@name,'ca_resident') and @value='yes']");
-        sendClick(tabId, "//input[starts-with(@name,'above_65') and @value='yes']");
         sendClick(tabId, "//input[starts-with(@name,'certify_eligibility') and @value='yes']");
-        sendClick(tabId, "//input[starts-with(@name,'question1') and @value='arrive_by_car']");
         sendClick(tabId, "//button[@data-test='submit']");
 
         sendValue(tabId, "//input[@name='first_name']", form['first']);
@@ -77,6 +75,7 @@ function fillCcsf(tabId, form) {
 
         wait(tabId, "//input[@name='address_1']", function() {
             sendValue(tabId, "//input[@name='address_1']", form['address']);
+            sendValue(tabId, "//input[@name='address_2']", form['address2']);
             sendValue(tabId, "//input[@name='city']", form['city']);
             sendValue(tabId, "//input[@name='state']", form['state']);
             sendValue(tabId, "//input[@name='postal_code']", form['zip']);
