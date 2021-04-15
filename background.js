@@ -33,7 +33,7 @@ function fillMyTurn(tabId, form) {
                 sendClick(tabId, "//input[@id='q-screening-health-data']");
                 sendClick(tabId, "//input[@id='q-screening-accuracy-attestation']");
                 sendClick(tabId, "//input[@id='q-screening-privacy-statement']");
-                sendClick(tabId, "//input[@id='q-screening-eligibility-age-range-16 - 49']");
+                sendClick(tabId, "//input[@id='q-screening-eligibility-age-range-18 and older']");
                 sendClick(tabId, "//input[@id='q-screening-underlying-health-condition-No']");
                 sendClick(tabId, "//input[@id='q-screening-disability-No']");
     
